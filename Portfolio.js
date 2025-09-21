@@ -1,6 +1,6 @@
 // Menu icon navbar
-Let menuIcon = document.querySelector('#menu-icon');
-Let navbar = document.querySelector('.navbar');
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
@@ -8,14 +8,14 @@ menuIcon.onclick = () => {
 };
 
 // Scroll sections active link
-Let sections= document.querySelectorAll('section');
-Let navLinks= document.querySelectorAll('header nav a');
+let sections= document.querySelectorAll('section');
+let navLinks= document.querySelectorAll('header nav a');
 Window.onscroll= () =>{
     Sections.forEach(sec => {
-        Let top = window.scrollY;
-        Let offset = sec.offsetTop – 150;
-        Let height = sec.offsetHeight;
-        Let id = sec.getAttribute('id');
+        let top = window.scrollY;
+        let offset = sec.offsetTop – 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
 
         If(top >= offset && top < offset+height){
             navLinks.forEach(links => {
@@ -26,7 +26,7 @@ Window.onscroll= () =>{
     });
 
     // Sticky Navbar
-Let header = document.querySelector('.header');
+let header = document.querySelector('.header');
 
 Header.classList.toggle('sticky',window.scrollY > 100);
 
